@@ -1,0 +1,23 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "username": "djricky088",
+            "password": "ric123"
+        }
+    ],
+    "phrases": [
+        {
+            "id": "1",
+            "phrase": "I AM A DEVELOPER"
+        }
+    ],
+    "times": [
+        {
+            "id": "1",
+            "phraseId": "1",
+            "userId": "1",
+            "time": "23:05:166"
+        }
+    ]
+}
