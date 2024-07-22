@@ -10,7 +10,8 @@ export const Navbar = () => {
             </div>
             <div className="navbar-right">
                 <a href="#">HOW TO PLAY</a>
-                {loginStatus === "LoggedIn" ? <a>Welcome <span>{user?.username}</span></a> : <a>Login</a>}
+                {loginStatus === "LoggedIn" && <a>Welcome <span>{user?.username}</span></a>}
+                {loginStatus === "LoggedOut" && <a>Login</a>}
                 <img src={loginStatus === "LoggedIn" ? `${user}` : "../assets/react.svg"} />
             </div>
 
