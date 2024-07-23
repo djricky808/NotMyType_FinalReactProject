@@ -14,7 +14,6 @@ export const Navbar = () => {
                 {loginStatus === "LoggedOut" && <a>Login</a>}
                 <img src={loginStatus === "LoggedIn" ? `${user}` : "../assets/react.svg"} />
             </div>
-
         </nav>
     )
 }

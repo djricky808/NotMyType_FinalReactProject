@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { TUser, TLoginStatus } from "../Types";
 import { LoginRequests } from "../api/UserAPI";
 
@@ -40,6 +40,14 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
     setLoginStatus("LoggedOut");
   };
 
+  useEffect(()=> {
+    const maybeUser = localStorage.getItem('user');
+    if(maybeUser) {
+        setUser(JSON.parse(maybeUser));
+        setLoginStatus("LoggedIn");
+    }
+  }, [])
+
   return (
     <LoginContext.Provider
       value={{
@@ -57,6 +65,8 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLogin = () => {
   const context = useContext(LoginContext);
+
+
 
   return {
     user: context.user,
