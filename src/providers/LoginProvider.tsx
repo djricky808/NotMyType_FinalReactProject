@@ -21,6 +21,21 @@ export const LoginProvider = ({children}:{children:ReactNode}) => {
         })
     }
 
+    const login = async ({username, password}: TUser) => {
+        const user = await LoginRequests.getUserFromServer(username);
+        if(user.password !== password){
+            throw new Error('Incorrect Password')
+        }
+        setUser(user);
+        setLoginStatus('LoggedIn');
+    }
+
+    const logout = ()=> {
+        setUser(null);
+        localStorage.removeItem("user");
+        setLoginStatus("LoggedOut");
+    }
+
     return (
         <LoginContext.Provider value={{
             user,
