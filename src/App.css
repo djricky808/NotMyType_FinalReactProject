@@ -1,19 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
-
 #root {
   margin: 0;
   text-align: center;
   width: 100%;
-  font-family: "Aldrich", sans-serif;
+  font-family: "Silom", sans-serif;
 }
+
+/* Navbar */
 
 .navbar-main {
   display: flex;
   position: sticky;
   top: 0;
-  justify-content: space-evenly;
-  background-color: #93c247;
+  justify-content: space-between;
+  background-color: #20ee00;
   width: 100%;
+  align-items: center;
 }
 
+.navbar-left,
+.navbar-right {
+  margin: 20px;
+}
 
+.navbar-left h3 {
+  font-weight: 800;
+  color: black;
+  margin: 0;
+  font-size: 48px;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  color:black;
+}
+
+.user-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+}
