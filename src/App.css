@@ -38,6 +38,7 @@
 
 .navbar-right a {
   text-decoration: none;
+  cursor: pointer;
   font-size: 24px;
   font-weight: 700;
   color:black;
