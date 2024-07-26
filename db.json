@@ -3,7 +3,8 @@
         {
             "id": "1",
             "username": "djricky088",
-            "password": "ric123"
+            "password": "ric123",
+            "profilePic": "./public/profiles/sharpedo.png"
         }
     ],
     "phrases": [

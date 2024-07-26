@@ -5,7 +5,7 @@ import { LoginRequests } from "../api/UserAPI";
 type TLoginProvider = {
   user: TUser | null;
   loginStatus: TLoginStatus;
-  register: ({ username, password }: TUser) => Promise<void>;
+  register: ({ username, password, profilePic }: TUser) => Promise<void>;
   signUp: () => void;
   login: ({ username, password }: TUser) => Promise<void>;
   logout: () => void;
@@ -18,8 +18,8 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<TUser | null>(null);
   const [loginStatus, setLoginStatus] = useState<TLoginStatus>("LoggedOut");
 
-  const register = ({ username, password }: TUser) => {
-    return LoginRequests.registerFetch({ username, password }).then(
+  const register = ({ username, password, profilePic }: TUser) => {
+    return LoginRequests.registerFetch({ username, password, profilePic }).then(
       (user: TUser) => {
         localStorage.setItem("user", JSON.stringify(user));
         return setUser(user);
@@ -31,7 +31,7 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
     setLoginStatus('SignUp');
   }
 
-  const login = async ({ username, password }: TUser) => {
+  const login = async ({ username, password }: Omit<TUser,"profilePic">) => {
     const user = await LoginRequests.getUserFromServer(username);
     if (user.password !== password) {
       throw new Error("Incorrect Password");
