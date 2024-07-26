@@ -10,6 +10,7 @@
     "phrases": [
         {
             "id": "1",
+            "level": 1,
             "phrase": "I AM A DEVELOPER"
         }
     ],

@@ -7,7 +7,7 @@ type TLoginProvider = {
   loginStatus: TLoginStatus;
   register: ({ username, password, profilePic }: TUser) => Promise<void>;
   signUp: () => void;
-  login: ({ username, password }: TUser) => Promise<void>;
+  login: ({ username, password }: Omit<TUser,"profilePic">) => Promise<void>;
   logout: () => void;
 
 };

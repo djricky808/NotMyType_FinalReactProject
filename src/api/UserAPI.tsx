@@ -3,10 +3,10 @@ import { TUser } from "../Types";
 const baseURL = `http://localhost:3000/users`;
 
 export const LoginRequests = {
-  registerFetch: ({ username, password }: TUser): Promise<TUser> => {
+  registerFetch: ({ username, password, profilePic }: TUser): Promise<TUser> => {
     return fetch(baseURL, {
       method: "POST",
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password, profilePic }),
       headers: { "Content-Type": "application/json" },
     }).then((response) => {
       if (!response.ok) {
