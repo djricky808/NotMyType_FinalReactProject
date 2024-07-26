@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { createContext, ReactNode,  useEffect, useState } from "react";
 import { TUser, TLoginStatus } from "../Types";
 import { LoginRequests } from "../api/UserAPI";
 
@@ -6,11 +6,13 @@ type TLoginProvider = {
   user: TUser | null;
   loginStatus: TLoginStatus;
   register: ({ username, password }: TUser) => Promise<void>;
+  signUp: () => void;
   login: ({ username, password }: TUser) => Promise<void>;
   logout: () => void;
+
 };
 
-const LoginContext = createContext<TLoginProvider>({} as TLoginProvider);
+export const LoginContext = createContext<TLoginProvider>({} as TLoginProvider);
 
 export const LoginProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<TUser | null>(null);
@@ -24,6 +26,10 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
       }
     );
   };
+
+  const signUp = () => {
+    setLoginStatus('SignUp');
+  }
 
   const login = async ({ username, password }: TUser) => {
     const user = await LoginRequests.getUserFromServer(username);
@@ -54,6 +60,7 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
         user,
         loginStatus,
         register,
+        signUp,
         login,
         logout,
       }}
@@ -63,16 +70,4 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useLogin = () => {
-  const context = useContext(LoginContext);
 
-
-
-  return {
-    user: context.user,
-    loginStatus: context.loginStatus,
-    register: context.register,
-    login: context.login,
-    logout: context.logout,
-  };
-};

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 
 export const Login = () => {
-  const { login, loginStatus } = useLogin;
+  const { login, signUp } = useLogin;
   const [usernameInput, setUsernameInput] = useState<string>("");
   const [passwordInput, setPasswordInput] = useState<string>("");
   return (
@@ -40,6 +40,9 @@ export const Login = () => {
         />
         <input type="submit" className="submit" value="LOGIN" />
       </form>
+      <p>
+        New to the game <span onClick={() => signUp()}>Sign up here!</span>
+      </p>
     </div>
   );
 };
