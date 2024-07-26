@@ -41,19 +41,28 @@
   cursor: pointer;
   font-size: 24px;
   font-weight: 700;
-  color:black;
+  color: black;
+}
+
+.navbar-right a span {
+  color: #0434a3;
+  font-size: 28px;
 }
 
 .user-img {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Login Screen */
 .login-screen span {
-  color:#20ee00;
+  color: #20ee00;
+}
+
+.login-screen h1 {
+  margin: 20px;
 }
 
 .login-screen p span {
@@ -63,14 +72,14 @@
 
 .login-form {
   display: flex;
-    flex-direction: column;
-    height: 50%;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    color: black;
-    background-color: gray;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: black;
+  background-color: gray;
 }
 
 .login-form form {

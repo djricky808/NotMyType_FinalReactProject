@@ -1,6 +1,6 @@
 import { useLogin } from "../providers/UseLogin";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 export const Login = () => {
   const { login, signUp } = useLogin();
@@ -11,12 +11,12 @@ export const Login = () => {
       <h1>
         Welcome to <span>NOT MY TYPE</span>
       </h1>
-      <h2>The Game Where the keyboard is QUIRKY, not QWERTY</h2>
+      <h2>The game where the keyboard is QUIRKY, not QWERTY</h2>
       <div className="login-form">
         <h1>PLEASE SIGN IN</h1>
         <form
           onSubmit={(e) => {
-            e.preventDefault;
+            e.preventDefault();
             login({
               username: usernameInput,
               password: passwordInput,
@@ -43,10 +43,10 @@ export const Login = () => {
             }}
             value={passwordInput}
           />
-          <input type="submit" className="submit" value="LOGIN" />
+          <input type="submit" value="LOGIN" />
         </form>
         <p>
-          New to the game <span onClick={() => signUp()}>Sign up here!</span>
+          New to the game? <span onClick={() => signUp()}>Sign up here!</span>
         </p>
       </div>
     </section>

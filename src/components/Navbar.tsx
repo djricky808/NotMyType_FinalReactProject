@@ -13,7 +13,7 @@ export const Navbar = () => {
                 <a href="#">HOW TO PLAY</a>
                 {loginStatus === "LoggedIn" && <a>Welcome <span>{user?.username}</span></a>}
                 {loginStatus === "LoggedOut" && <a>LOGIN</a>}
-                <img className="user-img" src={loginStatus === "LoggedIn" ? `${user}` : "/profiles/nullUser.png"} />
+                <img className="user-img" src={loginStatus === "LoggedIn" ? `/public/profiles/sharpedo.png` : "/profiles/nullUser.png"} />
             </div>
         </nav>
     )
