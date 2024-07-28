@@ -1,7 +1,7 @@
 import { useLogin } from "../providers/UseLogin";
 
 export const Navbar = () => {
-  const { user, loginStatus } = useLogin();
+  const { user, loginStatus, logout } = useLogin();
   return (
     <nav className="navbar-main">
       <div className="navbar-left">
@@ -23,6 +23,7 @@ export const Navbar = () => {
               : "/profiles/nullUser.png"
           }
         />
+        {loginStatus === "LoggedIn" && <a onClick={()=>logout()}>Logout</a>}
       </div>
     </nav>
   );

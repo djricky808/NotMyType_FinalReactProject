@@ -33,4 +33,23 @@ export const LoginRequests = {
         }
         return user;
       }),
+
+  checkServerIfUsernameExists: (username: string): Promise<void | TUser> => {
+    return fetch(baseURL)
+    .then((response) => {
+      if(!response.ok){
+        throw new Error('Could not verify username')
+      }
+      return response.json()
+    })
+    .then((users: TUser[]) => 
+    users.find((user: TUser) => user.username === username))
+    .then((user) => {
+      if(user){
+        throw new Error("This username is already taken, please create a different username")
+      }
+      return;
+    }
+  )
+  }
 };

@@ -1,25 +1,37 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "username": "djricky088",
-            "password": "ric123",
-            "profilePic": "./public/profiles/sharpedo.png"
-        }
-    ],
-    "phrases": [
-        {
-            "id": "1",
-            "level": 1,
-            "phrase": "I AM A DEVELOPER"
-        }
-    ],
-    "times": [
-        {
-            "id": "1",
-            "phraseId": "1",
-            "userId": "1",
-            "time": "23:05:166"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "username": "djricky088",
+      "password": "ric123",
+      "profilePic": "./public/profiles/sharpedo.png"
+    },
+    {
+      "id": "1b05",
+      "username": "shawndempowerer",
+      "password": "shawn123",
+      "profilePic": "/public/profiles/nullUser.png"
+    },
+    {
+      "id": "c143",
+      "username": "natedagreat",
+      "password": "sevedge",
+      "profilePic": "/public/profiles/nullUser.png"
+    }
+  ],
+  "phrases": [
+    {
+      "id": "1",
+      "level": 1,
+      "phrase": "I AM A DEVELOPER"
+    }
+  ],
+  "times": [
+    {
+      "id": "1",
+      "phraseId": "1",
+      "userId": "1",
+      "time": "23:05:166"
+    }
+  ]
 }
