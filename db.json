@@ -4,25 +4,37 @@
       "id": "1",
       "username": "djricky088",
       "password": "ric123",
-      "profilePic": "./public/profiles/sharpedo.png"
+      "profilePic": "./public/profiles/zero.png"
     },
     {
       "id": "1b05",
       "username": "shawndempowerer",
       "password": "shawn123",
-      "profilePic": "/public/profiles/nullUser.png"
+      "profilePic": "/public/profiles/delta.png"
     },
     {
       "id": "c143",
       "username": "natedagreat",
       "password": "sevedge",
-      "profilePic": "/public/profiles/nullUser.png"
+      "profilePic": "/public/profiles/cursing.png"
     },
     {
-      "id": "7460",
-      "username": "sharky",
-      "password": "shaka",
-      "profilePic": "/public/profiles/sharpedo.png"
+      "id": "9b43",
+      "username": "itsAndrei1700",
+      "password": "andrei123",
+      "profilePic": "/public/profiles/functional.png"
+    },
+    {
+      "id": "b80b",
+      "username": "beanieBaby",
+      "password": "prentus",
+      "profilePic": "/public/profiles/ampersand.png"
+    },
+    {
+      "id": "1f86",
+      "username": "jhiggs",
+      "password": "learningtime",
+      "profilePic": "/public/profiles/infinity.png"
     }
   ],
   "phrases": [

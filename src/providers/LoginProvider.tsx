@@ -53,6 +53,7 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
       throw new Error("Incorrect Password");
     }
     setUser(user);
+    localStorage.setItem("user", JSON.stringify(user));
     setLoginStatus("LoggedIn");
   };
 

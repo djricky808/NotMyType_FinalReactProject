@@ -62,6 +62,10 @@
   margin: 20px;
 }
 
+.login-screen span {
+  color: #20ee00;
+}
+
 .login-screen p span,
 .signup-screen p span {
   cursor: pointer;
@@ -83,6 +87,13 @@
 
 .signup-screen {
   margin-top: 20px;
+  width: 75%;
+}
+
+.error-message {
+  display: block;
+  color: rgb(251, 251, 251);
+  background-color: rgb(103, 0, 0);
 }
 
 .login-form form,
@@ -104,6 +115,12 @@
   font-size: 24px;
   font-family: "Silom", sans-serif;
   margin-bottom: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+#create-new-user-form input {
+  width: 50%;
 }
 
 .login-form form input[type="submit"],

@@ -3,6 +3,7 @@ import { useLogin } from "../providers/UseLogin";
 import { profilePictures } from "../profilePictures";
 import toast from "react-hot-toast";
 
+
 export const SignUp = () => {
   const { register, loginPage } = useLogin();
 
@@ -13,6 +14,9 @@ export const SignUp = () => {
   const [verifiedPassword, setVerifiedPassword] = useState<string>("");
   const [image, setimage] = useState<string>(defaultImage);
 
+   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+//   const [isImageSelected, setIsImageSelected] = useState(false);
+
   return (
     <>
       <section className="signup-screen">
@@ -21,6 +25,10 @@ export const SignUp = () => {
           id="create-new-user-form"
           onSubmit={(e) => {
             e.preventDefault();
+            setIsFormSubmitted(true);
+            if(image === defaultImage){
+                return;
+            }
             register(
               {
                 username: usernameinput,
@@ -41,6 +49,7 @@ export const SignUp = () => {
             type="text"
             onChange={(e) => setUsernameInput(e.target.value)}
             value={usernameinput}
+            required
           />
           <label htmlFor="password">Create a password.</label>
           <input
@@ -48,6 +57,7 @@ export const SignUp = () => {
             type="password"
             onChange={(e) => setPasswordInput(e.target.value)}
             value={passwordinput}
+            required
           />
           <label htmlFor="verified-password">
             Please re-enter your password.
@@ -57,10 +67,13 @@ export const SignUp = () => {
             type="password"
             onChange={(e) => setVerifiedPassword(e.target.value)}
             value={verifiedPassword}
+            required
           />
-          <label htmlFor="select-picture">Select Profile Picture</label>
+          <label htmlFor="select-picture">Select Profile Picture</label> 
+          {isFormSubmitted===true && image === defaultImage && <p className="error-message">Please select a profile picture</p>}
           <div className="picture-options">
-            {Object.entries(profilePictures).map(([value, pictureValue]) => {
+           
+            {Object.entries(profilePictures).slice(1).map(([value, pictureValue]) => {
               return (
                 <label className="picture-option">
                   <input
