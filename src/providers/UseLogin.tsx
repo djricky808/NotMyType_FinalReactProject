@@ -9,6 +9,7 @@ export const useLogin = () => {
     loginStatus: context.loginStatus,
     register: context.register,
     signUp: context.signUp,
+    loginPage: context.loginPage,
     login: context.login,
     logout: context.logout,
   };

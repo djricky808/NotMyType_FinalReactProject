@@ -56,24 +56,23 @@
   object-fit: cover;
 }
 
-/* Login Screen */
-.login-screen span {
-  color: #20ee00;
-}
-
+/* Login Screen & Sign Up Screens */
 .login-screen h1 {
   margin: 20px;
 }
 
-.login-screen p span {
+.login-screen p span,
+.signup-screen p span {
   cursor: pointer;
   font-weight: 700;
+  color: #20ee00;
 }
 
-.login-form {
+.login-form,
+.signup-screen {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 100%;
   width: 50%;
   justify-content: space-between;
   align-items: center;
@@ -82,17 +81,24 @@
   background-color: gray;
 }
 
-.login-form form {
+.signup-screen {
+  margin-top: 20px;
+}
+
+.login-form form,
+#create-new-user-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.login-form label {
+.login-form label,
+#create-new-user-form label {
   font-size: 24px;
 }
 
-.login-form form input {
+.login-form form input,
+#create-new-user-form input {
   background-color: white;
   color: black;
   font-size: 24px;
@@ -100,8 +106,45 @@
   margin-bottom: 20px;
 }
 
-.login-form form input[type="submit"] {
+.login-form form input[type="submit"],
+#create-new-user-form input[type="submit"] {
   background-color: #20ee00;
   border-radius: 8px;
   border: 3px solid black;
+}
+
+.picture-options {
+  display: flex;
+}
+
+.picture-options img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.picture-option {
+  display: block;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.picture-option input[type='radio']{
+  display: none;
+}
+
+.picture-option .radio-label { 
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.picture-option input[type="radio"]:checked +.radio-label{
+  background-color: #5eff00;
+  color: #fff;
+  border-color: #028400;
 }

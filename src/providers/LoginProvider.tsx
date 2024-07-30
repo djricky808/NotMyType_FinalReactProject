@@ -7,6 +7,7 @@ type TLoginProvider = {
   loginStatus: TLoginStatus;
   register: ({ username, password, profilePic }: TUser, verifiedPassword:string) => Promise<void>;
   signUp: () => void;
+  loginPage: () => void;
   login: ({ username, password }: Omit<TUser, "profilePic">) => Promise<void>;
   logout: () => void;
 };
@@ -42,6 +43,10 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
     setLoginStatus("SignUp");
   };
 
+  const loginPage = () => {
+    setLoginStatus("LoggedOut")
+  }
+
   const login = async ({ username, password }: Omit<TUser, "profilePic">) => {
     const user = await LoginRequests.getUserFromServer(username);
     if (user.password !== password) {
@@ -72,6 +77,7 @@ export const LoginProvider = ({ children }: { children: ReactNode }) => {
         loginStatus,
         register,
         signUp,
+        loginPage,
         login,
         logout,
       }}

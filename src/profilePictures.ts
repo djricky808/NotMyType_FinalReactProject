@@ -1,7 +1,7 @@
-import nullImage from '../public/profiles/nullUser.png'
+import nullUser from '../public/profiles/nullUser.png'
 import sharpedo from '../public/profiles/sharpedo.png'
 
 export const profilePictures = {
-    nullImage,
+    nullUser,
     sharpedo
 }
