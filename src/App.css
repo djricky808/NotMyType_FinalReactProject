@@ -132,18 +132,18 @@
   margin: 10px 0;
 }
 
-.picture-option input[type='radio']{
+.picture-option input[type="radio"] {
   display: none;
 }
 
-.picture-option .radio-label { 
+.picture-option .radio-label {
   display: flex;
   padding: 5px 5px;
   border-radius: 50%;
   transition: all 0.3s;
 }
 
-.picture-option input[type="radio"]:checked +.radio-label{
+.picture-option input[type="radio"]:checked + .radio-label {
   background-color: #5eff00;
   color: #fff;
   border-color: #028400;

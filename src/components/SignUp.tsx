@@ -63,15 +63,20 @@ export const SignUp = () => {
             {Object.entries(profilePictures).map(([value, pictureValue]) => {
               return (
                 <label className="picture-option">
-                <input
-                  type="radio"
-                  id={value}
-                  name="select-picture"
-                  value={pictureValue}
-                  key={pictureValue}
-                  onChange={(e)=> setimage(e.target.value)}
-                />
-                <span className="radio-label"><img src={`../../public/profiles/${value}.png`} alt={value} /></span>
+                  <input
+                    type="radio"
+                    id={value}
+                    name="select-picture"
+                    value={pictureValue}
+                    key={pictureValue}
+                    onChange={(e) => setimage(e.target.value)}
+                  />
+                  <span className="radio-label">
+                    <img
+                      src={`../../public/profiles/${value}.png`}
+                      alt={value}
+                    />
+                  </span>
                 </label>
               );
             })}
