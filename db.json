@@ -17,6 +17,12 @@
       "username": "natedagreat",
       "password": "sevedge",
       "profilePic": "/public/profiles/nullUser.png"
+    },
+    {
+      "id": "7460",
+      "username": "sharky",
+      "password": "shaka",
+      "profilePic": "/public/profiles/sharpedo.png"
     }
   ],
   "phrases": [

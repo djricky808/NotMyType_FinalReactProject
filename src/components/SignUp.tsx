@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 export const SignUp = () => {
   const { register, loginPage } = useLogin();
 
-  const defaultImage = profilePictures.nullImage;
+  const defaultImage = profilePictures.nullUser;
 
   const [usernameinput, setUsernameInput] = useState<string>("");
   const [passwordinput, setPasswordInput] = useState<string>("");

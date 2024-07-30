@@ -57,7 +57,8 @@
 }
 
 /* Login Screen & Sign Up Screens */
-.login-screen h1 {
+.login-screen h1,
+.signup-screen h1 {
   margin: 20px;
 }
 
@@ -72,7 +73,6 @@
 .signup-screen {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 50%;
   justify-content: space-between;
   align-items: center;
@@ -127,7 +127,7 @@
 .picture-option {
   display: block;
   position: relative;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   margin: 10px 0;
 }
@@ -137,7 +137,7 @@
 }
 
 .picture-option .radio-label { 
-  display: inline-block;
+  display: flex;
   padding: 5px 5px;
   border-radius: 50%;
   transition: all 0.3s;
