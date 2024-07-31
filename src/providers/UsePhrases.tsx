@@ -6,5 +6,7 @@ export const usePhrases = () => {
 
   return {
     allPhrases: context.allPhrases,
+    selectLevel: context.selectLevel,
+    phraseLevel: context.phraseLevel,
   };
 };

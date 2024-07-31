@@ -176,8 +176,11 @@
   border: 5px solid gray;
   padding: 20px;
   margin: 20px;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .level-block h3 {
