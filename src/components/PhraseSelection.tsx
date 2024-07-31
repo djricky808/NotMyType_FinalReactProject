@@ -1,21 +1,19 @@
-import { useState } from "react";
-import { PhraseRequests } from "../api/PhrasesAPI";
-import { TPhrase } from "../Types";
+import { usePhrases } from "../providers/UsePhrases";
 
 export const PhraseSelection = () => {
-  const [phrases, setPhrases] = useState<TPhrase>([]);
+  const {allPhrases} = usePhrases();
 
   
 
   return (
-    <>
-      {phrases.map((phrase) => {
+    <section className="phrase-selection">
+      {allPhrases.map((phrase) => {
         return (
-          <div>
+          <div className="level-block">
             <h3>{phrase.level}</h3>
           </div>
         );
       })}
-    </>
+    </section>
   );
 };

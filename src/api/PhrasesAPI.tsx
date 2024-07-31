@@ -1,9 +1,9 @@
-import { TPhrase } from "../Types";
+//import { TPhrase } from "../Types";
 
 const baseURL = `http://localhost:3000/phrases`;
 
 export const PhraseRequests = {
-    getPhrases: (): Promise<TPhrase> => {
+    getPhrases: () => {
         return fetch(baseURL)
         .then((response) => {
             if(!response.ok){
