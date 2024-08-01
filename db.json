@@ -41,17 +41,20 @@
     {
       "id": "1",
       "level": 1,
-      "phrase": "I AM A DEVELOPER"
+      "phrase": "I AM A DEVELOPER",
+      "description": "Something that we all are."
     },
     {
       "id": "2",
       "level": 2,
-      "phrase": "BUILD COOL STUFF"
+      "phrase": "BUILD COOL STUFF",
+      "description": "What we do. The clean version."
     },
     {
       "id": "3",
       "level": 3,
-      "phrase": "CULTIVATE CONNECTIONS"
+      "phrase": "CULTIVATE CONNECTIONS",
+      "description":"Part of the 3D job process"
     }
   ],
   "times": [

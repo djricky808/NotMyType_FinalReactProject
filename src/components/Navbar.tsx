@@ -15,15 +15,17 @@ export const Navbar = () => {
           </a>
         )}
         {loginStatus === "LoggedOut" && <a>LOGIN</a>}
-        <img
-          className="user-img"
-          src={
-            loginStatus === "LoggedIn"
-              ? user?.profilePic
-              : "/profiles/nullUser.png"
-          }
-        />
-        {loginStatus === "LoggedIn" && <a onClick={()=>logout()}>Logout</a>}
+        <div className="profile-container">
+          <img
+            className="user-img"
+            src={
+              loginStatus === "LoggedIn"
+                ? user?.profilePic
+                : "/profiles/nullUser.png"
+            }
+          />
+        </div>
+        {loginStatus === "LoggedIn" && <a onClick={() => logout()}>Logout</a>}
       </div>
     </nav>
   );
