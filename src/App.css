@@ -50,8 +50,8 @@
 }
 
 .user-img {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -167,8 +167,9 @@
 }
 
 /*Phrase Selection Screen */
-.phrase-selection {
+.phrase-levels {
   display: flex;
+  flex-direction: row;
 }
 
 .level-block {
@@ -187,4 +188,31 @@
   margin: 0 auto;
   color: black;
   font-size: 64px;
+}
+
+/* Phrase Modal */
+.phrase-modal-main {
+  position: absolute;
+  background-color: grey;
+  padding: 20px;
+  top: 35%;
+  left: 35%;
+  transition: ease-in 1s;
+}
+.phrase-modal-scores {
+  display: flex;
+}
+
+.incomplete{
+  color: rgb(103, 0, 0);
+}
+
+.phrase-modal-left {
+  padding: 20px;
+}
+
+.phrase-modal-right {
+  padding: 20px;
+  background-color: white;
+  color: black;
 }

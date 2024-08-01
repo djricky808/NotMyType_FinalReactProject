@@ -8,5 +8,7 @@ export const usePhrases = () => {
     allPhrases: context.allPhrases,
     selectLevel: context.selectLevel,
     phraseLevel: context.phraseLevel,
+    exitLevelModal: context. exitLevelModal,
+    isLevelSelected: context. isLevelSelected,
   };
 };

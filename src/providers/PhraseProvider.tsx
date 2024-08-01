@@ -6,7 +6,9 @@ import toast from "react-hot-toast";
 type TPhraseProvider = {
   allPhrases: TPhrase[];
   selectLevel: (phrase: number) => void;
+  exitLevelModal: () => void;
   phraseLevel: number;
+  isLevelSelected: boolean;
 };
 
 export const PhraseContext = createContext<TPhraseProvider>(
@@ -16,6 +18,7 @@ export const PhraseContext = createContext<TPhraseProvider>(
 export const PhraseProvider = ({ children }: { children: ReactNode }) => {
   const [allPhrases, setAllPhrases] = useState<TPhrase[]>([]);
   const [phraseLevel, setPhraseLevel] = useState<number>(0);
+  const [isLevelSelected, setIsLevelSelected] = useState<boolean>(false);
 
   const getPhraseLevels = () => {
     return PhraseRequests.getPhrases()
@@ -27,7 +30,14 @@ export const PhraseProvider = ({ children }: { children: ReactNode }) => {
 
   const selectLevel = (level: number) => {
     setPhraseLevel(level);
+    setIsLevelSelected(true);
   };
+
+  const exitLevelModal = () => {
+    setPhraseLevel(0)
+    setIsLevelSelected(false);
+  }
+
 
   useEffect(() => {
     getPhraseLevels();
@@ -39,6 +49,8 @@ export const PhraseProvider = ({ children }: { children: ReactNode }) => {
         allPhrases,
         selectLevel,
         phraseLevel,
+        exitLevelModal,
+        isLevelSelected,
       }}
     >
       {children}
