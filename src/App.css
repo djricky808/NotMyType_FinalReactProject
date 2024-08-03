@@ -208,7 +208,7 @@
   background-color: #028400;
 }
 
-.level-block:hover h3{
+.level-block:hover h3 {
   color: white;
 }
 
@@ -220,13 +220,35 @@
   top: 0;
   left: 0;
   margin: 0 auto;
-  transition: ease-in 1s;
+  animation: flicker-on 0.2s forwards;
+}
+
+@keyframes flicker-on {
+  0% {
+    transform: scale(1, 0.1);
+    filter: brightness(1.5)
+  }
+
+  33% {
+    transform: scale(1, 0.5);
+    filter: brightness(2);
+  }
+
+  66% {
+    transform: scale(1, 0.75);
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+    filter: brightness(1);
+  }
 }
 .phrase-modal-scores {
   display: flex;
 }
 
-.incomplete{
+.incomplete {
   color: rgb(103, 0, 0);
 }
 
