@@ -184,6 +184,7 @@
 .phrase-levels {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .level-block {

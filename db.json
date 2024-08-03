@@ -70,27 +70,5 @@
       "userId": "1",
       "time": 1384209
     }
-  ],
-  "tutorial": [
-    {
-      "id" : "1",
-      "image": "",
-      "instruction": "In this game. The keys have been scrambled so that no key will type the key that it should. It is up to you to figure out what key goes with what."
-    },
-    {
-      "id": "2",
-      "image": "",
-      "instruction": "Select a phrase that is commonly heard in the devslopes"
-    },
-    {
-      "id": "3",
-      "image": "",
-      "instruction": "In this game. None of the keys will type the key that it should. It is up to you to figure out what key goes with what."
-    },
-    {
-      "id": "4",
-      "image": "",
-      "instruction": "In this game. None of the keys will type the key that it should. It is up to you to figure out what key goes with what."
-    }
   ]
 }
