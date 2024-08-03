@@ -48,13 +48,19 @@
       "id": "2",
       "level": 2,
       "phrase": "BUILD COOL STUFF",
-      "description": "What we do. The clean version."
+      "description": "What we do... The clean version."
     },
     {
       "id": "3",
       "level": 3,
       "phrase": "CULTIVATE CONNECTIONS",
       "description":"Part of the 3D job process"
+    },
+    {
+      "id": "4",
+      "level": 4,
+      "phrase": "HANDS ON THE KEYBOARD",
+      "description": "The best way of learning how to code."
     }
   ],
   "times": [
@@ -63,6 +69,28 @@
       "phraseId": "1",
       "userId": "1",
       "time": 1384209
+    }
+  ],
+  "tutorial": [
+    {
+      "id" : "1",
+      "image": "",
+      "instruction": "In this game. The keys have been scrambled so that no key will type the key that it should. It is up to you to figure out what key goes with what."
+    },
+    {
+      "id": "2",
+      "image": "",
+      "instruction": "Select a phrase that is commonly heard in the devslopes"
+    },
+    {
+      "id": "3",
+      "image": "",
+      "instruction": "In this game. None of the keys will type the key that it should. It is up to you to figure out what key goes with what."
+    },
+    {
+      "id": "4",
+      "image": "",
+      "instruction": "In this game. None of the keys will type the key that it should. It is up to you to figure out what key goes with what."
     }
   ]
 }
