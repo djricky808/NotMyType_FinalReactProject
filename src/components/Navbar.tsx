@@ -1,14 +1,17 @@
 import { useLogin } from "../providers/UseLogin";
+import { useTutorial } from "../providers/UseTutorial";
 
 export const Navbar = () => {
   const { user, loginStatus, logout } = useLogin();
+  const {activateTutorial} = useTutorial()
+
   return (
     <nav className="navbar-main">
       <div className="navbar-left">
         <h3>NOT MY TYPE</h3>
       </div>
       <div className="navbar-right">
-        <a href="#">HOW TO PLAY</a>
+        <a onClick={() => activateTutorial()}>HOW TO PLAY</a>
         {loginStatus === "LoggedIn" && (
           <a>
             Welcome <span>{user?.username}</span>

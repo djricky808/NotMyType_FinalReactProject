@@ -7,16 +7,16 @@ export const tutorial = [
     {
       id: "2",
       image: "",
-      instruction: "Select a phrase that is commonly heard in the Devslopes community. Complete the phrase and your time will be recorded"
+      instruction: "Select a phrase that is commonly heard in the Devslopes community. Complete the phrase and your time will be recorded."
     },
     {
       id: "3",
       image: "",
-      instruction: "Be careful! Any incorrect keystroke will delete the entire phrase. Forcing you to start over again (with the time still ticking)"
+      instruction: "Be careful! Any incorrect keystroke will delete the entire phrase. Forcing you to start over again (with the time still ticking!)"
     },
     {
       id: "4",
       image: "",
-      instruction: "No cheating! If you try to exit this level and re-enter, they keys will be scrambled again."
+      instruction: "No cheating! If you try to exit this level and re-enter, the keys will be scrambled again."
     }
   ]

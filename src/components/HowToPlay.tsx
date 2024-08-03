@@ -15,10 +15,9 @@ export const HowToPlay = () =>{
         setTutorialPage(tutorialPage - 1);
     }
 
-    const 
-
     return(
         <section className="tutorial-modal">
+            <div className="close-button" onClick={()=> hideTutorial()}>X</div>
             <img src={tutorial[tutorialPage].image} />
             <p>{tutorial[tutorialPage].instruction}</p>
             <div className="tutorial-progress">

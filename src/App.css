@@ -213,15 +213,22 @@
   color: white;
 }
 
-/* Phrase Modal */
+/* Phrase / Tutorial Modals */
+.tutorial-modal,
 .phrase-modal-main {
   position: absolute;
   background-color: grey;
   padding: 20px;
+  width: 90%;
   top: 0;
   left: 0;
   margin: 0 auto;
   animation: flicker-on 0.2s forwards;
+  z-index: 1;
+}
+
+.tutorial-modal {
+  top: 20%;
 }
 
 @keyframes flicker-on {
