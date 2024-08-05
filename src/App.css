@@ -216,15 +216,23 @@
 /* Phrase / Tutorial Modals */
 .tutorial-modal,
 .phrase-modal-main {
-  position: absolute;
-  background-color: grey;
-  padding: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    padding: 20px;
+    width: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: flicker-on 0.2s forwards;
+    z-index: 1;
+}
+
+.tutorial-modal{
+  flex-direction: column;
   width: 90%;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  animation: flicker-on 0.2s forwards;
-  z-index: 1;
 }
 
 .tutorial-modal {
