@@ -4,7 +4,7 @@ import { useTutorial } from "../providers/UseTutorial";
 
 export const Navbar = () => {
   const { user, loginStatus, logout } = useLogin();
-  const { activateTutorial } = useTutorial();
+  const { activateTutorial, isTutorialActive } = useTutorial();
   const { exitLevelModal } = usePhrases();
   return (
     <nav className="navbar-main">
@@ -36,7 +36,7 @@ export const Navbar = () => {
             }
           />
         </div>
-        {loginStatus === "LoggedIn" && <a onClick={() => logout()}>Logout</a>}
+        {loginStatus === "LoggedIn" && <button disabled={isTutorialActive} onClick={() => logout()}>Logout</button>}
       </div>
     </nav>
   );

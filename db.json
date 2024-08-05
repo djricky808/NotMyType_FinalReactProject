@@ -35,6 +35,12 @@
       "username": "jhiggs",
       "password": "learningtime",
       "profilePic": "/public/profiles/infinity.png"
+    },
+    {
+      "id": "c82d",
+      "username": "dCanadianCoder",
+      "password": "eric123",
+      "profilePic": "/public/profiles/endTag.png"
     }
   ],
   "phrases": [
@@ -54,7 +60,7 @@
       "id": "3",
       "level": 3,
       "phrase": "CULTIVATE CONNECTIONS",
-      "description":"Part of the 3D job process"
+      "description": "Part of the 3D job process"
     },
     {
       "id": "4",

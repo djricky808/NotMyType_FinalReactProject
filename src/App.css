@@ -197,12 +197,19 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  position: relative;
 }
 
 .level-block h3 {
-  margin: 0 auto;
+  margin: auto;
   color: black;
   font-size: 64px;
+  position: absolute;
+  top: 10%;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  text-align: center;
 }
 
 .level-block:hover {
@@ -218,7 +225,7 @@
 .phrase-modal-main {
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: grey;
     padding: 20px;
     width: 80%;
@@ -260,6 +267,12 @@
     filter: brightness(1);
   }
 }
+.phrase-modal-left >h1:first-of-type ,
+.phrase-modal-left h2 {
+ margin-bottom: 0;
+ color: #20ee00;
+}
+
 .phrase-modal-scores {
   display: flex;
 }
@@ -285,4 +298,5 @@
 
 .buttons button:hover {
   background-color: #20ee00;
+  color: black;
 }

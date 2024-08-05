@@ -11,7 +11,7 @@ export const PhraseModal = () => {
       <div className="phrase-modal-main">
         <div className="phrase-modal-scores">
           <div className="phrase-modal-left">
-            <h1>{`Phrase ${phraseLevel}`}</h1>
+            <h1>{`PHRASE ${phraseLevel}`}</h1>
             <p>{allPhrases[phraseLevel-1].description}</p>
             <h2>Personal Best Time:</h2>
             {completedTime && <h1>{completedTime}</h1>}

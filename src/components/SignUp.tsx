@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useLogin } from "../providers/UseLogin";
 import { profilePictures } from "../profilePictures";
 import toast from "react-hot-toast";
+import { useTutorial } from "../providers/UseTutorial";
 
 
 export const SignUp = () => {
   const { register, loginPage } = useLogin();
+  const {activateTutorial} = useTutorial();
 
   const defaultImage = profilePictures.nullUser;
 
@@ -39,6 +41,7 @@ export const SignUp = () => {
             )
               .then(() => {
                 toast.success("Registration successful, enjoy the game");
+                activateTutorial();
               })
               .catch((e: Error) => toast.error(e.message));
           }}
