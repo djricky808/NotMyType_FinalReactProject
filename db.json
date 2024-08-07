@@ -41,6 +41,12 @@
       "username": "dCanadianCoder",
       "password": "eric123",
       "profilePic": "/public/profiles/endTag.png"
+    },
+    {
+      "id": "4f01",
+      "username": "whitney",
+      "password": "tech123",
+      "profilePic": "/public/profiles/notEqual.png"
     }
   ],
   "phrases": [
