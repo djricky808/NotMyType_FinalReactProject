@@ -1,3 +1,4 @@
+
 export type TUser = {
     username: string;
     password: string;
@@ -10,4 +11,10 @@ export type TPhrase = {
     level: number;
     phrase: string;
     description: string;
+}
+
+export type TTimes = {
+    phraseId: string;
+    userId: string;
+    time: number;
 }
