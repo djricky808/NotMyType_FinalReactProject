@@ -52,25 +52,25 @@
   "phrases": [
     {
       "id": "1",
-      "level": 1,
+      "level": "1",
       "phrase": "I AM A DEVELOPER",
       "description": "Something that we all are."
     },
     {
       "id": "2",
-      "level": 2,
+      "level": "2",
       "phrase": "BUILD COOL STUFF",
       "description": "What we do... The clean version."
     },
     {
       "id": "3",
-      "level": 3,
+      "level": "3",
       "phrase": "CULTIVATE CONNECTIONS",
       "description": "Part of the 3D job process"
     },
     {
       "id": "4",
-      "level": 4,
+      "level": "4",
       "phrase": "HANDS ON THE KEYBOARD",
       "description": "The best way of learning how to code."
     }

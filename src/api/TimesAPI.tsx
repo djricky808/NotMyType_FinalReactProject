@@ -1,4 +1,4 @@
-const baseURL = "https://localhost:3000/times";
+const baseURL = "http://localhost:3000/times";
 
 export const  TimesRequests = {
     getTimes: () => {

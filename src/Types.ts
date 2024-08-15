@@ -8,7 +8,7 @@ export type TUser = {
 export type TLoginStatus = 'LoggedOut' | 'LoggedIn' | "SignUp";
 
 export type TPhrase = {
-    level: number;
+    level: string;
     phrase: string;
     description: string;
 }
