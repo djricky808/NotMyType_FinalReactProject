@@ -80,31 +80,43 @@
       "id": "1",
       "phraseId": "1",
       "userId": "djricky088",
+      "profilePic": "./public/profiles/zero.png",
       "time": 1384209
     },
     {
       "id": "2",
       "phraseId": "1",
       "userId": "natedagreat",
+      "profilePic": "./public/profiles/cursing.png",
       "time": 1323209
     },
     {
       "id": "3",
       "phraseId": "1",
       "userId": "andrei123",
+      "profilePic": "./public/profiles/functional.png",
       "time": 1284309
     },
     {
-      "id": "1",
+      "id": "4",
       "phraseId": "1",
       "userId": "shawndempowerer",
+      "profilePic": "./public/profiles/delta.png",
       "time": 970450
     },
     {
-      "id": "4",
-      "phraseId": "2",
+      "id": "5",
+      "phraseId": "1",
       "userId": "beanieBaby",
-      "time": 100439
+      "profilePic": "./public/profiles/ampersand.png",
+      "time": 1100439
+    },
+    {
+      "id": "6",
+      "phraseId": "1",
+      "userId": "dCanadianCoder",
+      "profilePic": "/public/profiles/endTag.png",
+      "time": 1154439
     }
   ]
 }

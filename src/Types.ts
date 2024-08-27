@@ -16,5 +16,7 @@ export type TPhrase = {
 export type TTimes = {
     phraseId: string;
     userId: string;
+    profilePic: string;
     time: number;
+    id: string;
 }
