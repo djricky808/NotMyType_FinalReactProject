@@ -9,6 +9,7 @@ type TPhraseProvider = {
   exitLevelModal: () => void;
   phraseLevel: string;
   isLevelSelected: boolean;
+  phrase: TPhrase | null;
 };
 
 export const PhraseContext = createContext<TPhraseProvider>(
@@ -17,6 +18,7 @@ export const PhraseContext = createContext<TPhraseProvider>(
 
 export const PhraseProvider = ({ children }: { children: ReactNode }) => {
   const [allPhrases, setAllPhrases] = useState<TPhrase[]>([]);
+  const [phrase, setPhrase] = useState<TPhrase | null>(null);
   const [phraseLevel, setPhraseLevel] = useState<string>('');
   const [isLevelSelected, setIsLevelSelected] = useState<boolean>(false);
 
@@ -29,6 +31,8 @@ export const PhraseProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const selectLevel = (level: string) => {
+    const phrase = allPhrases.find((phrase: TPhrase )=> phrase.level === level)
+    setPhrase(phrase || null);
     setPhraseLevel(level);
     setIsLevelSelected(true);
   };
@@ -51,6 +55,7 @@ export const PhraseProvider = ({ children }: { children: ReactNode }) => {
         phraseLevel,
         exitLevelModal,
         isLevelSelected,
+        phrase,
       }}
     >
       {children}

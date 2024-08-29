@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export const PhraseModal = () => {
   const [topFive, setTopFive] = useState<TTimes[]>([]);
 
-  const { allPhrases, phraseLevel, exitLevelModal } = usePhrases();
+  const { phrase, phraseLevel, exitLevelModal } = usePhrases();
   const { allTimes, userTime, convertToMinutes } = useTimes();
   const { user } = useLogin();
 
@@ -30,14 +30,16 @@ export const PhraseModal = () => {
     console.log("New Game");
   }
 
-  useEffect(() => getTop5Times(phraseLevel), [phraseLevel]);
+  useEffect(() => {
+    getTop5Times(phraseLevel);}
+    , [phraseLevel]);
 
   return (
     <div className="phrase-modal-main">
       <div className="phrase-modal-scores">
         <div className="phrase-modal-left">
           <h1>{`PHRASE ${phraseLevel}`}</h1>
-          <p>{allPhrases[Number(phraseLevel) - 1].description}</p>
+          <p>{phrase?.description}</p>
           <h2>Personal Best Time:</h2>
           {bestTime && <h1>{bestTime}</h1>}
           {!bestTime && <h1 className="incomplete">NOT COMPLETED</h1>}
