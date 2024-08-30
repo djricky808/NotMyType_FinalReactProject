@@ -6,6 +6,8 @@ import { LoginProvider } from "./providers/LoginProvider.tsx";
 import { PhraseProvider } from "./providers/PhraseProvider.tsx";
 import { TutorialProvider } from "./providers/TutorialProvider.tsx";
 import { TimesProvider } from "./providers/TimesProvider.tsx";
+import { GameProvider } from "./providers/GameProvider.tsx";
+import { Game } from "./components/Game.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -13,7 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <PhraseProvider>
         <TimesProvider>
           <TutorialProvider>
-            <App />
+            <GameProvider>
+              <App />
+            </GameProvider>
           </TutorialProvider>
         </TimesProvider>
       </PhraseProvider>

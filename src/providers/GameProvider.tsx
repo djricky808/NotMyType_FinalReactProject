@@ -1,5 +1,5 @@
-import { useContext, createContext, ReactNode, useState } from "react";
-import { TPhrase, TTimes, TUser } from "../Types";
+import { createContext, ReactNode, useState } from "react";
+import { TPhrase } from "../Types";
 import { usePhrases } from "./UsePhrases";
 
 type TGameProvider = {
@@ -17,8 +17,6 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   const [playerInput, setPlayerInput] = useState<string>("");
   const [timer, setTimer] = useState<number>(0);
   const [isGameRunning, setIsGameRunning] = useState<boolean>(false);
-
-  const { allPhrases } = usePhrases();
 
   const startGame = (phrase: TPhrase) => {
     setPhraseinUse(phrase.phrase);

@@ -1,6 +1,7 @@
 import { usePhrases } from "../providers/UsePhrases";
 import { useTimes } from "../providers/UseTimes";
 import { useLogin } from "../providers/UseLogin";
+import { useGame } from "../providers/UseGame";
 import { TTimes } from "../Types";
 import { useEffect, useState } from "react";
 
@@ -10,6 +11,7 @@ export const PhraseModal = () => {
   const { phrase, phraseLevel, exitLevelModal } = usePhrases();
   const { allTimes, userTime, convertToMinutes } = useTimes();
   const { user } = useLogin();
+  const { startGame } = useGame();
 
   const personalBestTime = (phraseLevel: string, user: string | undefined) => {
     const myTime = userTime(phraseLevel, user ?? "");
@@ -26,13 +28,11 @@ export const PhraseModal = () => {
     setTopFive(top5);
   };
 
-  function startGame() {
-    console.log("New Game");
-  }
-
   useEffect(() => {
-    getTop5Times(phraseLevel);}
-    , [phraseLevel]);
+    if (phraseLevel) {
+      getTop5Times(phraseLevel);
+    }
+  }, [phraseLevel]);
 
   return (
     <div className="phrase-modal-main">
@@ -44,7 +44,7 @@ export const PhraseModal = () => {
           {bestTime && <h1>{bestTime}</h1>}
           {!bestTime && <h1 className="incomplete">NOT COMPLETED</h1>}
           <div className="buttons">
-            <button onClick={() => startGame()}>START</button>
+            <button onClick={() => phrase && startGame(phrase)}>START</button>
             <button onClick={() => exitLevelModal()}>CANCEL</button>
           </div>
         </div>
@@ -53,7 +53,12 @@ export const PhraseModal = () => {
           <h1>TOP SCORES</h1>
           {topFive.map((time, i) => {
             return (
-              <div className={`top-5-scorer ${time.userId === user?.username ? 'user-in-top-5' : ''}`} key={time.id}>
+              <div
+                className={`top-5-scorer ${
+                  time.userId === user?.username ? "user-in-top-5" : ""
+                }`}
+                key={time.id}
+              >
                 <h1
                   className={
                     time.userId === user?.username ? "user-in-top-5" : ""
@@ -77,7 +82,11 @@ export const PhraseModal = () => {
                     {convertToMinutes(time.time)}
                   </h3>
                 </div>
-                <img src={time.profilePic} alt="" className="user-img top-5-image" />
+                <img
+                  src={time.profilePic}
+                  alt=""
+                  className="user-img top-5-image"
+                />
               </div>
             );
           })}

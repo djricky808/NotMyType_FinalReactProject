@@ -327,3 +327,38 @@
   background-color: #20ee00;
   color: black;
 }
+
+/* Game Screen */
+.game-screen {
+  width: 100%;
+  position: relative;
+}
+
+.game-screen form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 150px;
+}
+
+.game-screen h1,
+.game-screen input {
+  font-size: 7vw;
+  font-family: "Silom", sans-serif;
+  margin: 0 75px;
+  text-align: left;
+  width: 90%;
+}
+
+.game-screen input{
+  
+  text-align: left;
+  padding-left: 0;
+  box-sizing: border-box;
+  line-height: inherit;
+}
+
+
+/* .game-screen input:focus {
+  text-align: left;
+} */
