@@ -3,7 +3,7 @@ import { GameContext } from "./GameProvider";
 
 export const useGame = () => {
     const context = useContext(GameContext);
-    const {phraseInUse, playerInput, timer, isGameRunning, startGame} = context;
+    const {phraseInUse, playerInput, timer, isGameRunning, startGame, startTimer} = context;
 
     return {
         phraseInUse,
@@ -11,5 +11,6 @@ export const useGame = () => {
         timer,
         isGameRunning,
         startGame,
+        startTimer
     }
 }

@@ -8,6 +8,7 @@ type TGameProvider = {
   timer: number;
   isGameRunning: boolean;
   startGame: (phrase: TPhrase) => void;
+  startTimer: () => void;
 };
 
 export const GameContext = createContext<TGameProvider>({} as TGameProvider);
@@ -22,7 +23,20 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     setPhraseinUse(phrase.phrase);
     setPlayerInput("");
     setIsGameRunning(true);
+    startTimer()
   };
+
+  const startTimer = () => {
+    setTimer(0)
+    let time = 0
+
+    const updateTime = () => { time += 1;
+    setTimer(time);
+    setTimeout(() => updateTime(), 1);
+    }
+
+    setTimeout(()=> updateTime() , 1);
+  }
 
   return (
     <GameContext.Provider
@@ -32,6 +46,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         timer,
         isGameRunning,
         startGame,
+        startTimer
       }}
     >
       {children}
