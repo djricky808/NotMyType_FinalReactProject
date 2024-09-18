@@ -9,6 +9,9 @@ type TGameProvider = {
   isGameRunning: boolean;
   startGame: (phrase: TPhrase) => void;
   startTimer: () => void;
+  isWrong: boolean;
+  handleInput: (lastInput: string) => void;
+  incorrectLetter: string;
 };
 
 export const GameContext = createContext<TGameProvider>({} as TGameProvider);
@@ -16,8 +19,11 @@ export const GameContext = createContext<TGameProvider>({} as TGameProvider);
 export const GameProvider = ({ children }: { children: ReactNode }) => {
   const [phraseInUse, setPhraseinUse] = useState<string>("");
   const [playerInput, setPlayerInput] = useState<string>("");
+  const [incorrectLetter, setIncorrectLetter]=
+  useState('');
   const [timer, setTimer] = useState<number>(0);
   const [isGameRunning, setIsGameRunning] = useState<boolean>(false);
+  const [isWrong, setIsWrong] = useState<boolean>(false);
 
   const startGame = (phrase: TPhrase) => {
     setPhraseinUse(phrase.phrase);
@@ -38,6 +44,26 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     setTimeout(()=> updateTime() , 1);
   }
 
+  const handleInput = (lastInput: string) => {
+    const phraseSoFar = phraseInUse.slice(0, lastInput.length)
+    if (lastInput === phraseSoFar){
+      setPlayerInput(lastInput);
+      console.log('true')
+    } else {
+      wrongInput(lastInput)
+    }
+  }
+
+  const wrongInput = (lastInput:string) => {
+    console.log('wrong!')
+    setIsWrong(true);
+    setIncorrectLetter(lastInput.slice(lastInput.length -1, lastInput.length))
+    console.log(incorrectLetter)
+    // setTimeout(()=> {
+    //   setPlayerInput('')
+    //   setIncorrectLetter('')}, 1000);
+    setIsWrong(false);
+  }
   return (
     <GameContext.Provider
       value={{
@@ -46,7 +72,10 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         timer,
         isGameRunning,
         startGame,
-        startTimer
+        startTimer,
+        isWrong,
+        handleInput,
+        incorrectLetter,
       }}
     >
       {children}
