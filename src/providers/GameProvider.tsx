@@ -59,9 +59,9 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     setIsWrong(true);
     setIncorrectLetter(lastInput.slice(lastInput.length -1, lastInput.length))
     console.log(incorrectLetter)
-    // setTimeout(()=> {
-    //   setPlayerInput('')
-    //   setIncorrectLetter('')}, 1000);
+    setTimeout(()=> {
+      setPlayerInput('')
+      setIncorrectLetter('')}, 1000);
     setIsWrong(false);
   }
   return (
