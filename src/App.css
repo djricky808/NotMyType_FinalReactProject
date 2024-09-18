@@ -350,19 +350,37 @@
 }
 .player-input-box {
   position: relative;
-  background-color: rgb(66, 66, 66);
+  z-index: -100;
 }
 
-.player-input-box input{
-  display: hidden;
+.player-input-background {
+    background-color: rgb(51, 51, 51);
+    height: 25vh;
+    position: absolute;
+    width: 90vw;
+    margin: 0 10vh;
+    z-index: -10;
+}
+
+.player-input-box input {
+  color: transparent;
+  background: transparent;
+  border: transparent;
+  position:absolute;
+  top:200%;
+  right:200%;
+}
+
+.player-input-box :focus {
+  border:transparent;
+  color:transparent;
+  background-color: transparent;;
 }
 
 .player-input-box span {
   color: red;
   margin: 0;
 }
-
-
 
 /* .game-screen input:focus {
   text-align: left;
